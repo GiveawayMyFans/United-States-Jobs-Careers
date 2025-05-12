@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>USA Jobs – CareersNGR</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: blue;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .search-bar {
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search-bar input {
+      padding: 0.5rem;
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .jobs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .job-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .job-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .job-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: blue;
+      margin-bottom: 0.5rem;
+    }
+
+    .job-meta {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      padding: 1rem;
+      background-color: blue;
+      color: white;
+    }
+    
+  @keyframes dance {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(5deg) scale(1.1); }
+    50% { transform: rotate(0deg) scale(1); }
+    75% { transform: rotate(-5deg) scale(1.1); }
+    100% { transform: rotate(0deg) scale(1); }
+  }
+  
+
+  .apply-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: blue;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    animation: bounce 1s infinite;
+    transition: transform 0.3s ease;
+  }
+
+  .apply-btn:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .site-description {
+    text-align: center;
+    font-size: 24px;
+    color: #004080;
+    background: linear-gradient(90deg, #e0f7ff, #f0f9ff);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>United States <br>Jobs & Careers</h1>
+</header>
+
+<div class="container">
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search jobs...">
+  </div>
+  
+    <h3 class="site-description">
+  Discover the latest high-paying remote job opportunities in the United States. Apply now and take the next bold step in your career journey!<br />
+  <span style="color: red;">Just With Your Phone Or Laptop</span> 
+</h3>
+
+  <div class="jobs-grid" id="jobsContainer">
+    <div class="job-card">
+      <div class="job-title">Remote Customer Service Representative</div>
+      <div class="job-meta">Company: Remote Inc | Location: USA | Date: May 10, 2025</div><br>
+       <a href="https://example.com/apply" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="job-card">
+      <div class="job-title">Data Entry Clerk (Remote)</div>
+      <div class="job-meta">Company: DataPro | Location: California, USA | Date: May 8, 2025</div> <br>
+       <a href="https://example.com/apply" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="job-card">
+      <div class="job-title">Warehouse Assistant</div>
+      <div class="job-meta">Company: FedEx | Location: Texas, USA | Date: May 5, 2025</div><br>
+       <a href="https://example.com/apply" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="job-card">
+      <div class="job-title">Remote Tech Support Agent</div>
+      <div class="job-meta">Company: TechHelp | Location: Florida, USA | Date: May 3, 2025</div><br>
+       <a href="https://example.com/apply" class="apply-btn">Apply Now</a>
+    </div>
+  </div>
+</div>
+
+<center>
+  <p style="color: red; font-size: 20px; animation: dance 1s infinite;">
+    3 Days left to apply
+  </p>
+</center>
+
+
+<footer>
+  &copy; 2025 CareersNGR. All Rights Reserved.
+</footer>
+
+<script>
+  const searchInput = document.getElementById('search');
+  const jobCards = document.querySelectorAll('.job-card');
+
+  searchInput.addEventListener('input', function () {
+    const value = this.value.toLowerCase();
+    jobCards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(value) ? 'block' : 'none';
+    });
+  });
+</script>
+
+
+
+</body>
+</htm
