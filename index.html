@@ -132,51 +132,6 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-    carousel-container {
-      position: relative;
-      max-width: 800px;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 300%; /* 3 images */
-    }
-
-    .slide {
-      width: 100%;
-      flex-shrink: 0;
-    }
-
-    .slide img {
-      width: 100%;
-      display: block;
-    }
-
-    .buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-    }
-
-    .buttons button {
-      background-color: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: white;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    .buttons button:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
   </style>
 </head>
 <body>
@@ -189,20 +144,7 @@
   <div class="search-bar">
     <input type="text" id="search" placeholder="Search jobs...">
   </div>
-
-  <div class="carousel-container">
-  <div class="slides" id="slides">
-    <div class="slide"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiScDBWWK99K-GTihKBGaHD5xF8nfegfEKOSW7_mKqZxfL5Gc-GQ29Gy0bfaqD-xLaOc6Vqo2KRDP-xW11g8gJ0j1NDQzIlxIAnt4RkNQG5jtA7brwF21bNDpsn4Vf0TDQFkbfvq6JJ6lLzmSDg5vlgn-zKUb4XqUASUl3j1ZXulnbZk7S8tsE1sVQ4350/w320-h228/WhatsApp%20Image%202025-05-13%20at%2000.59.06_450faee5.jpg" alt="Image 1"></div>
-    <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
-    <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
-  </div>
-  <div class="buttons">
-    <button onclick="prevSlide()">&#10094;</button>
-    <button onclick="nextSlide()">&#10095;</button>
-  </div>
-</div>
-
-
+  
     <h3 class="site-description">
   Discover the latest high-paying remote job opportunities in the United States. Apply now and take the next bold step in your career journey!<br />
   <span style="color: red;">Just With Your Phone Or Laptop</span> 
@@ -212,22 +154,22 @@
     <div class="job-card">
       <div class="job-title">Remote Customer Service Representative</div>
       <div class="job-meta">Company: Remote Inc | Location: USA | Date: May 10, 2025</div><br>
-       <a href="https://sawutser.top/4/8998632" class="apply-btn">Apply Now</a>
+       <a href="https://example.com/apply" class="apply-btn">Apply Now</a>
     </div>
     <div class="job-card">
       <div class="job-title">Data Entry Clerk (Remote)</div>
       <div class="job-meta">Company: DataPro | Location: California, USA | Date: May 8, 2025</div> <br>
-       <a href="https://sawutser.top/4/8998632" class="apply-btn">Apply Now</a>
+       <a href="https://example.com/apply" class="apply-btn">Apply Now</a>
     </div>
     <div class="job-card">
       <div class="job-title">Warehouse Assistant</div>
       <div class="job-meta">Company: FedEx | Location: Texas, USA | Date: May 5, 2025</div><br>
-       <a href="https://sawutser.top/4/8998632" class="apply-btn">Apply Now</a>
+       <a href="https://example.com/apply" class="apply-btn">Apply Now</a>
     </div>
     <div class="job-card">
       <div class="job-title">Remote Tech Support Agent</div>
       <div class="job-meta">Company: TechHelp | Location: Florida, USA | Date: May 3, 2025</div><br>
-       <a href="https://sawutser.top/4/8998632" class="apply-btn">Apply Now</a>
+       <a href="https://example.com/apply" class="apply-btn">Apply Now</a>
     </div>
   </div>
 </div>
@@ -255,27 +197,6 @@
     });
   });
 </script>
-
-  <script>
-  let currentIndex = 0;
-  const slides = document.getElementById('slides');
-  const totalSlides = 3;
-
-  function showSlide(index) {
-    slides.style.transform = translateX(-${index * 100}%);
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    showSlide(currentIndex);
-  }
-
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    showSlide(currentIndex);
-  }
-</script>
-  
 
 
 
